@@ -1,0 +1,14 @@
+{
+  "listeners": {
+    "*:3000": {
+      "application": "api"
+    }
+  },
+  "applications": {
+    "api": {
+      "type": "ruby",
+      "processes": 1,
+      "script": "/app/current/simple/config.ru"
+    }
+  }
+}
