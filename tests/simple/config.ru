@@ -1,7 +1,7 @@
-class HelloKittyIslandAdventure
+class SimpleApplication
   def self.call(env)
-    [200, {}, 'I like turtles']
+    [200, {}, 'Hello Universe!']
   end
 end
 
-run HelloKittyIslandAdventure
+run SimpleApplication

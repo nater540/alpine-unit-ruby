@@ -11,8 +11,8 @@ ENV DESTDIR /opt/unit/
 
 WORKDIR ${INSTALL_PATH}
 
-COPY ./scripts /scripts
 RUN apk --no-cache add bash
+COPY ./scripts /scripts
 
 RUN /scripts/base_packages.sh && \
   /scripts/install_ruby.sh
