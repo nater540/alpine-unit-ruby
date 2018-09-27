@@ -11,7 +11,10 @@
         "timeout": 10,
         "requests": 1000
       },
-      "processes": 1,
+      "processes": {
+        "max": 10,
+        "spare": 4
+      },
       "working_directory": "/app/current/json_app",
       "user": "nobody",
       "group": "nobody",
