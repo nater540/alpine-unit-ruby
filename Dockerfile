@@ -29,13 +29,13 @@ FROM base AS final-destination
 
 COPY --from=nginx-unit ${DESTDIR} ${DESTDIR}
 
-ADD ./tests .
+ADD ./examples .
 
 RUN ln -sf /dev/stdout /var/log/unitd.log
 
+COPY ./conf.json /opt/unit/state
+
 # RUN apk --no-cache add tree
-COPY ./config.json /opt/unit/state
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--rewrite", "15:3", "--"]
 CMD ["/opt/unit/sbin/unitd", "--no-daemon", "--control", "0.0.0.0:8080", "--modules", "/opt/unit/modules", "--state", "/opt/unit/state"]
-# CMD ["tree", "/opt/unit"]

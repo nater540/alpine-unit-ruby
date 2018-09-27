@@ -5,7 +5,8 @@ services:
     build:
       context: .
     volumes:
-      - ./tests:/app/current
+      - ./examples:/app/current
+      - ./state:/opt/unit/state
     ports:
       - 3000:3000
       - 8080:8080

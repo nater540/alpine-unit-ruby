@@ -12,13 +12,13 @@
         "requests": 1000
       },
       "processes": 1,
-      "working_directory": "/app/current",
+      "working_directory": "/app/current/json_app",
       "user": "nobody",
       "group": "nobody",
       "environment": {
         "key": "value"
       },
-      "script": "/app/current/simple/config.ru"
+      "script": "/app/current/json_app/config.ru"
     }
   }
 }
